@@ -5,6 +5,13 @@
 #include "game_UI.h"
 #include <fstream>
 
+typedef struct{
+    int win;
+    int lose;
+    int draw;
+    int index;
+}Result_t;
+
 class File{
 private:
     vector<string> userDataFile;
@@ -23,6 +30,8 @@ public:
     void searchPlayerInfor(void);
     void searchMatchInfor(int *gameData, int &numberStep);
     void showListMatch(void);
+    void showSameResult(const string name);
+    Result_t getResult(const string name);
 };
 
 #endif // FILE_H
