@@ -1,0 +1,12 @@
+Duong,1,0,0
+Huyen,0,1,0
+Messi,1,0,0
+Ronaldo,0,1,0
+Xavi,0,1,0
+Iniesta,1,0,0
+HiHi,1,0,0
+HoHo,0,1,0
+HuHu,0,1,0
+HaHa,1,0,0
+Duong,1,0,0
+Duy,0,1,0
