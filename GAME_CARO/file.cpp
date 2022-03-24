@@ -70,28 +70,6 @@ void File::loadUserData(){
         myFile.close();
     }
 }
-/* @brief: Load match data from file
-*  @param: None
-*  @return: None
-*/
-void File::loadMatchData(){
-    string temp;
-    int i = 0;
-    fstream myFile;
-    myFile.open("F://FPT_TRAINING//PROJECT//GAME_CARO//matchData.txt", ios::in);
-    if(myFile.fail()){
-        cout << "Open file error" << endl;
-        system("pause");
-    }
-    else{
-        while(!myFile.eof()){
-            getline(myFile, temp);
-            matchDataFile.push_back(temp);
-            i++;
-        }
-        myFile.close();
-    }
-}
 /* @brief: Get player infor
 *  @param: None
 *  @return: None
@@ -119,6 +97,26 @@ void File::searchPlayerInfor(){
     }
     cout << "Press any key to comeback Menu!" << endl;
     _getch();
+}
+/* @brief: Load match data from file
+*  @param: None
+*  @return: None
+*/
+void File::loadMatchData(){
+    string temp;
+    fstream myFile;
+    myFile.open("F://FPT_TRAINING//PROJECT//GAME_CARO//matchData.txt", ios::in);
+    if(myFile.fail()){
+        cout << "Open file error" << endl;
+        system("pause");
+    }
+    else{
+        while(!myFile.eof()){
+            getline(myFile, temp);
+            matchDataFile.push_back(temp);
+        }
+        myFile.close();
+    }
 }
 /* @brief: Search match
 *  @param: None
